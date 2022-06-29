@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  background: #000;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* -------------------- HEADER+NAVBAR -------------------- */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.nav-content {
+  width: 980px;
+}
+.nav-content ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 24px;
+}
+
+/* Navbar #1 */
+.apple-navbar a {
+  color: #d5d5d5;
+  font-size: 12px;
+  line-height: 44px;
+}
+.apple-navbar ion-icon {
+  font-size: 18px;
+  transform: translateY(3px);
+}
+.apple-navbar a:hover {
+  color: #fff;
+}
+
+/* Navbar #2 */
+.airpods-navbar .nav-content {
+  padding: 18px 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.nav-logo a {
+  color: #fefefe;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.nav-items button {
+  color: #fefefe;
+  font-size: 12px;
+  line-height: 22px;
+}
+.nav-items button:hover {
+  color: #2997ff;
+}
+.nav-items button:disabled,
+.nav-items button:disabled:hover {
+  color: #bebebe;
+  cursor: default;
+}
+.nav-items .buy-btn {
+  padding: 0 12px;
+  background: #147ce5;
+  border-radius: 12px;
+}
+.nav-items .buy-btn:hover {
+  color: #fefefe;
+}
+
+/* Navbar #2 - Sticky Functioning (.airpods-navbar) */
+.sticky {
+  position: fixed;
+  top: 0;
+
+  -webkit-backdrop-filter: saturate(180%) blur(15px);
+  -moz-backdrop-filter: saturate(180%) blur(15px);
+  -o-backdrop-filter: saturate(180%) blur(15px);
+  backdrop-filter: saturate(180%) blur(15px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  z-index: 10;
+}
+.sticky .nav-content {
+  border-bottom: none;
+}
+.sticky section {
+  padding-top: 44px;
+}
+
+/* -------------------- SECTIONS -------------------- */
+section {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  color: #f5f5f7;
+}
+
+/* ------------ SCROLL SECTIONS ------------ */
+.scroll-section {
+  width: 100%;
+  height: calc(100vh - 44px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Canvas Element */
+.canvas-elem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Main & Message Element Positioning */
+.main-elem,
+.msg-elem {
+  width: max-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+}
+.msg-elem {
+  transform: translate(-50%, 0%);
+  opacity: 0;
+}
+
+/* Main Element Text Styling */
+.main-elem h1 {
+  font-size: 150px;
+}
+.main-elem span {
+  font-style: italic;
+}
+.main-elem ion-icon {
+  font-size: 28px;
+  transform: translateY(6px);
+}
+.main-elem a {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f5f5f7;
+  cursor: pointer;
+}
+.main-elem a:hover {
+  text-decoration: underline;
+}
+
+/* Message Element Text Styling */
+.msg-elem h2 {
+  font-size: 96px;
+}
+.msg-elem small {
+  font-size: 18px;
+  font-weight: 600;
+}
+.msg-elem p {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 68px;
+}
+
+/* SECTION #1 */
+.section-01 .canvas-elem canvas {
+  width: 900px;
+}
+
+/* SECTION #2 */
+.section-02 .canvas-elem canvas {
+  width: 100%;
+}
+
+/* ------------ STATIC SECTIONS ------------ */
+.static-section {
+  padding: 50px 0;
+  position: relative;
+}
+.static-section > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* SECTION #4 */
+.section-04 .text {
+  width: 340px;
+  position: absolute;
+  font-size: 22px;
+  font-weight: 600;
+}
+.section-04-1 .text {
+  left: 14%;
+  bottom: 40px;
+}
+.section-04-2 .text {
+  left: 23.5%;
+  bottom: 42px;
+}
+.section-04-3 .text {
+  left: 25%;
+  top: 25%;
+}
+
+/* SECTION #5 */
+.section-05 .text {
+  position: absolute;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.section-05-1 .text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.section-05-1 .text p {
+  padding-bottom: 20px;
+  font-size: 21px;
+}
+.section-05-1 .text h1 {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 84px;
+}
+
+.section-05-2 .text {
+  width: 365px;
+  right: 18%;
+  bottom: 0;
+  font-size: 24px;
+}
+
+.section-05-3 .text {
+  left: 25%;
+  top: 25%;
+}
+
+/* SECTION #6 */
+.section-06 {
+  padding-bottom: 0;
+}
+.section-06 .text {
+  width: 440px;
+  position: absolute;
+  left: 17%;
+  bottom: 120px;
+  display: block;
+  text-align: left;
+}
+.section-06 .text p {
+  padding: 22px;
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* ------------ FOOTER ------------ */
+footer {
+  width: 100%;
+  background: #f5f5f7;
+  display: flex;
+  justify-content: center;
+}
+footer .content {
+  padding: 40px 0px;
+  width: 980px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
